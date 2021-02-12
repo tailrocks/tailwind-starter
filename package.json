@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-starter",
+  "version": "0.0.1",
+  "description": "Tailwind starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tailrocks/tailwind-starter.git"
+  },
+  "author": "donbeave",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tailrocks/tailwind-starter/issues"
+  },
+  "homepage": "https://github.com/tailrocks/tailwind-starter#readme"
+}
