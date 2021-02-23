@@ -8,8 +8,7 @@
 
   <!-- font config -->
   <link rel="preconnect" href="https://fonts.gstatic.com/">
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <style>
     body {
       font-family: 'Tangerine', serif;
@@ -20,14 +19,14 @@
 </head>
 
 <!-- add dark class here to activate dark mode -->
-<body class="">
+<body class="debug-screens">
 
 <!-- COMPONENT 1 -->
 <div class="dark:bg-gray-900">
   <div class="container mx-auto">
-    <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto">
+    <div class="max-w-screen-lg mx-auto xl:max-w-screen-xl">
       <div class="p-4">
-        <h1 class="p-16 bg-gray-200 text-gray-900 rounded-xl text-center text-8xl dark:bg-gray-800 dark:text-gray-400">
+        <h1 class="p-16 text-center text-gray-900 bg-gray-200 rounded-xl text-8xl dark:bg-gray-800 dark:text-gray-400">
           Hello World!
         </h1>
       </div>
@@ -35,6 +34,25 @@
   </div>
 </div>
 <!-- @end COMPONENT 1 -->
+
+<!-- dark mode toggle -->
+<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+<dark-mode-toggle
+    id="dark-mode-toggle-1"
+    appearance="switch"
+    dark="Dark"
+    light="Light"
+    remember="Remember"
+    style="position: fixed; bottom: 0; right: 0; font-family: sans-serif; background-color: black; color: white; font-size: 12px;"
+></dark-mode-toggle>
+
+<script type="text/javascript">
+  const toggle = document.querySelector("dark-mode-toggle");
+  const body = document.body;
+  toggle.mode === "dark" ? body.classList.add("dark") : body.classList.remove("dark");
+  toggle.addEventListener("colorschemechange", () => { body.classList.toggle("dark", toggle.mode === "dark"); });
+</script>
+<!-- @end dark mode toggle -->
 
 </body>
 </html>
