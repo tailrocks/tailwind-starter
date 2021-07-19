@@ -8,7 +8,7 @@
     "build": "tailwindcss build -i src/styles.css -o public/styles.css",
     "build:production": "NODE_ENV=production tailwindcss build -i src/styles.css -o public/styles.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npm run tailwind:watch & live-server public --no-css-inject --wait=200ms"
+    "serve": "npm run tailwind:watch & node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   "homepage": "https://github.com/tailrocks/tailwind-starter#readme",
   "dependencies": {
     "autoprefixer": "^10.3.1",
-    "live-server": "^1.2.1",
+    "eta": "^1.12.3",
+    "express": "^4.17.1",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4",
     "tailwindcss-debug-screens": "^2.0.0"

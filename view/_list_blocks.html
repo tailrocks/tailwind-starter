@@ -1,0 +1,11 @@
+<ul>
+  <% it.blocks.forEach(function(block){ %>
+  <li>
+    <a href="/blocks/<%= block.category %>/<%= block.name %>" target="_blank">
+      <%= block.category %>
+      -
+      <%= block.name %>
+    </a>
+  </li>
+  <% }) %>
+</ul>
