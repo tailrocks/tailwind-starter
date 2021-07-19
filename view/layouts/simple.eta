@@ -39,7 +39,7 @@
         position: fixed;
         bottom: 5px;
         right: 5px;
-        background: white;
+        background: #e2e2e2;
         border-radius: 3px;
         --dark-mode-toggle-dark-icon: url("https://cdn.jsdelivr.net/npm/heroicons@1.0.2/solid/sun.svg");
         --dark-mode-toggle-light-icon: url("https://cdn.jsdelivr.net/npm/heroicons@1.0.2/solid/moon.svg");

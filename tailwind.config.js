@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     debugScreens: {
       style: {
-        backgroundColor: 'white',
+        backgroundColor: '#e2e2e2',
         color: 'black',
         position: 'fixed',
         bottom: '5px',
