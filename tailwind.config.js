@@ -1,8 +1,13 @@
 module.exports = {
-  purge: [],
-  darkMode: 'class', // or 'media' or 'class'
+  mode: 'jit',
+  purge: ['./public/**/*.html'],
+  darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        tangerine: "'Tangerine'",
+      },
+    },
   },
   variants: {
     extend: {},

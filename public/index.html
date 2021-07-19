@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Tailwind Starter</title>
+
+  <style type="text/css">
+    :root {
+      color-scheme: light dark; /* stylelint-disable-line property-no-unknown */
+    }
+  </style>
+
+  <!-- font config -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine" />
+  <!-- @end font config -->
+</head>
+
+<!-- add dark class here to activate dark mode -->
+
+<body class="debug-screens">
+
+  <main>
+
+    <!-- COMPONENT 1 -->
+    <section class="font-tangerine bg-white dark:bg-[#394046]">
+      <div class="container mx-auto">
+        <div class="max-w-screen-lg mx-auto xl:max-w-screen-xl">
+          <div class="p-4">
+            <h1
+              class="p-16 text-center text-[#40390a] bg-[#ffe600] rounded-xl text-8xl dark:bg-[#262729] dark:text-[#00e3ff]">
+              Hello World!
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- @end COMPONENT 1 -->
+
+  </main>
+
+
+  <aside>
+    <!-- dark mode toggle -->
+    <style type="text/css">
+      dark-mode-toggle {
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        background: white;
+        border-radius: 3px;
+        --dark-mode-toggle-dark-icon: url("https://cdn.jsdelivr.net/npm/heroicons@1.0.2/solid/sun.svg");
+        --dark-mode-toggle-light-icon: url("https://cdn.jsdelivr.net/npm/heroicons@1.0.2/solid/moon.svg");
+        --dark-mode-toggle-icon-size: 1.5rem;
+      }
+    </style>
+    <dark-mode-toggle></dark-mode-toggle>
+
+    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+
+    <script type="text/javascript">
+      const toggle = document.querySelector("dark-mode-toggle");
+      const body = document.body;
+      toggle.mode === "dark"
+        ? body.classList.add("dark")
+        : body.classList.remove("dark");
+      toggle.addEventListener("colorschemechange", () => {
+        body.classList.toggle("dark", toggle.mode === "dark");
+      });
+    </script>
+    <!-- @end dark mode toggle -->
+  </aside>
+
+</body>
+
+</html>
