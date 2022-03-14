@@ -25,7 +25,7 @@
     "eta": "^1.12.3",
     "express": "^4.17.1",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4",
+    "tailwindcss": "^3.0.0",
     "tailwindcss-debug-screens": "^2.0.0"
   }
 }
